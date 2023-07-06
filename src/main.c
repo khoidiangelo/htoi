@@ -5,7 +5,7 @@
 
 int main() {
     char s[LENGTH];
-    int length = readline(s, LENGTH);
+    int length = readline(s, LENGTH);   // htoi expects legal hexadecimal input
     printf("%d\n", htoi(s, length));
     return 0;
 }

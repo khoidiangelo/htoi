@@ -4,10 +4,8 @@ int readline(char s[], int limit) {
     for (i = 0; i < limit-1 && (c = getchar()) != '\n' && c != EOF ; ++i) {
         s[i] = c;
     }
-    if (c == '\n') {
-        s[i] = c;
-        ++i;
+    if (c == '\n') {    // since htoi only checks for hex input newline not needed
+        s[i] = '\0';
     }
-    s[i] = '\0';
     return i;
 }
