@@ -6,6 +6,6 @@
 int main() {
     char s[LENGTH];
     int length = readline(s, LENGTH);
-    printf("%s\n%d\n", s, htoi(s, length));
+    printf("%d\n", htoi(s, length));
     return 0;
 }
