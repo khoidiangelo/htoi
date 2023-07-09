@@ -15,8 +15,8 @@ unsigned int htoi(char s[], int length) {
         } else {
             if (isdigit(s[i])) {
                 hexadecimal += (s[i]-'0')*(int)(pow(16.0,(double)length-i-1));
-            } else {    // 97 -> 103 a -> f | -87 equals to int value needed for hex
-                hexadecimal += (tolower(s[i])-87)*(int)(pow(16.0,(double)length-i-1));
+            } else if (tolower(s[i]) >= 'a' && tolower(s[i]) <= 'f') {    // 97 -> 102 a -> f | -87 equals to int value needed for hex
+                hexadecimal += (tolower(s[i])-'W')*(int)(pow(16.0,(double)length-i-1));
             }
         }
     }
